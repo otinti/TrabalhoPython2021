@@ -14,8 +14,8 @@
 <p>b) Se o usuário selecionar a opção 1, o programa deve solicitar que o usuário entre com as informações do novo produto.</p>
 <p>c) Se o usuário selecionar a opção 2, o programa deve solicitar que ao usuário que informe o valor mínimo e valor máximo dos produtos a serem apresentados na consulta:</p>
 <ul>
-  <li style='color: red'>Preço mínimo: </li>
-  <li style='color: red'>Preço máximo: </li>
+  <li>Preço mínimo: </li>
+  <li>Preço máximo: </li>
   <li>Listar todos os produtos (código, nome, descrição e valor) de todos os produtos dentro da faixa de preço informada.</li>
   <li>Apresente o nome do produto mais caro e do produto mais barato.</li>
 </ul>
