@@ -9,14 +9,14 @@ lista_produtos = []
 # FUNCTIONS - Start
 def limparConsole(pause):
     if pause == True:
-        os.system('pause')
+        os.system('pause') # Pressione qualquer tecla para continuar. . .
     os.system('cls')
 
 def printMessage(string, numeroDeIfensCima, numeroDeIfensBaixo):
     print('-'*numeroDeIfensCima + f'\n{string}\n' + '-'*numeroDeIfensBaixo)
 # FUNCTIONS - End
 
-defs.criarListaVazia() # Caso o arquivo estiver vazio, irá criar uma lista vazia (no arquivo) --- Evita erros de arquivo vazio no código
+defs.criarListaVaziaEmJSON() # Caso o arquivo estiver vazio, irá criar uma lista vazia (no arquivo) --- Evita erros de arquivo vazio no código
 limparConsole(False)
 while len(lista_produtos) != -1:
     menu_inicial = input('\n' + '≡'*5 + 'Menu' + '≡'*5 + '\n[ 1 ]Cadastrar produtos\n[ 2 ]Consultar produtos por faixa de preço\n[ 3 ]Gravar produtos em arquivo\n[ 4 ]Carregar produtos do arquivo\n[ 5 ]Sair\nOpção: ')

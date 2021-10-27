@@ -1,7 +1,7 @@
 import json
 import os
 
-local_arquivo = 'C:\\'
+local_arquivo = 'C:\\' # Adicione o local do arquivo json aqui
 
 def escreverArquivoJSON(lista):
     file = open(local_arquivo, 'w', encoding='utf8')
@@ -31,7 +31,7 @@ def criarPrintClsPause(string):
     os.system('pause')
     os.system('cls')
 
-def criarListaVazia():
+def criarListaVaziaEmJSON():
     if os.stat("produtos.json").st_size == 0: # Irá verificar se o arquivo está vazio
         lista_vazia = []
         escreverArquivoJSON(lista_vazia)
