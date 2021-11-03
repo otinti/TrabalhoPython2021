@@ -1,27 +1,21 @@
 import json
 import os
 
-local_arquivo = 'C:\\' # Adicione o local do arquivo json aqui
-
-def escreverArquivoJSON(lista):
+def escreverArquivoJSON(local_arquivo, lista):
     file = open(local_arquivo, 'w', encoding='utf8')
     json.dump(lista, file)
     file.close()
 
-def lerArquivoJSON():
+def lerArquivoJSON(local_arquivo):
     with open(local_arquivo, 'r', encoding='utf8') as f:
         return json.load(f)
 
-def salvarProdutoEmLista(lista):
-    codigo = int(input('Código: '))
-    nome = input('Nome: ')
-    descricao = input('Descrição: ')
-    valor = float(input('Valor: '))
+def salvarProdutoEmLista(variavel1, variavel2, variavel3, variavel4, lista):
     produto = {
-        'codigo': codigo,
-        'nome': nome,
-        'descricao': descricao,
-        'valor': valor
+        'codigo': variavel1,
+        'nome': variavel2,
+        'descricao': variavel3,
+        'valor': variavel4
     }
     lista.append(produto)
 
@@ -31,7 +25,10 @@ def criarPrintClsPause(string):
     os.system('pause')
     os.system('cls')
 
-def criarListaVaziaEmJSON():
+def printMessage(string, numeroDeIfensCima, numeroDeIfensBaixo):
+    print('-'*numeroDeIfensCima + f'\n{string}\n' + '-'*numeroDeIfensBaixo)
+
+def criarListaVaziaEmJSON(local_arquivo):
     if os.stat("produtos.json").st_size == 0: # Irá verificar se o arquivo está vazio
         lista_vazia = []
-        escreverArquivoJSON(lista_vazia)
+        escreverArquivoJSON(local_arquivo, lista_vazia)
